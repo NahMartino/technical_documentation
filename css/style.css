@@ -1,10 +1,11 @@
+body{
+    background: rgb(253, 253, 253,0.8);
+}
 /*Navigation*/
 #navbar{
     position: fixed;
     height: 100%;
-    width: 280px;
-    display: grid;
-    grid-template-rows: auto;
+    width: 300px;
     border-right: 3px solid black;
     top: 0;
     left: 0;
@@ -13,20 +14,84 @@
 header h1{
     position: relative;
     padding-left: 20px;
-    padding-top: 25px;
+    padding-top: 35px;
     margin: 0;
+    margin-bottom: 35px;
+    font-size: 33px;
+    font-weight: lighter;
+}
+.nav-link{
+    display: block;
+    padding-top: 25px;
+    padding-bottom: 8px;
+    height: 15px;
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 19px;
+    line-height: 0;
+    border-top: 1px solid black;
+    color: rgba(0, 0, 0, 0.75);
+}
+/*main*/
+#main-doc{
+    margin-top: 30px;
+    margin-left: 320px;
+    margin-right: 40px;
+    width: auto;
+    top: 0;
+}
+.main-section{
+    width: auto;
+}
+.main-section header h2{
+    font-weight: lighter;
     font-size: 30px;
 }
-#navbar a{
-    position: relative;
-    text-decoration: none;
-    color:black;
-    border: 1px solid black;
-    padding-left: 20px;
-    padding-top: 25px;
+.main-section p, .main-section ul{
+    margin-left: 15px;
     font-size: 18px;
-    line-height: 0;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.75)
 }
-main{
-    padding-left: 300px;
+.main-section ul{
+    margin-left: 30px;
+}
+.main-section code{
+    background: rgb(238, 238, 238);
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 25px;
+}
+@media (max-height: 750px){
+    #navbar{
+        overflow: scroll;
+    }
+}
+@media (max-width: 750px){
+    #navbar{
+        overflow: scroll;
+        height: 300px;
+        width: 100%;
+        position: relative;
+        border-right: none;
+        border-bottom: 3px solid black;
+    }
+    #navbar header{
+        border-bottom: 2px solid black;
+    }
+    header h1{
+        text-align: center;
+        padding-top: 25px;
+    }
+
+    #main-doc{
+        margin-left: 20px;
+    }
 }
